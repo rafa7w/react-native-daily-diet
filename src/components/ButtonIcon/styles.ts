@@ -1,7 +1,13 @@
 import { TouchableOpacity } from 'react-native'
 import styled from "styled-components/native";
-import { ArrowUpRight } from "phosphor-react-native";
+import { Feather } from "@expo/vector-icons";
 
+export type ButtonIconTypeStyleProps = 'PRIMARY' | 'SECONDARY'
+
+type Props = {
+  type: ButtonIconTypeStyleProps;
+}
+ 
 export const Container = styled(TouchableOpacity)`
   justify-content: center;
   align-items: center;
@@ -11,7 +17,7 @@ export const Container = styled(TouchableOpacity)`
   padding: 5px;
 `
 
-export const Arrow = styled(ArrowUpRight).attrs(({theme}) => ({
+export const Icon = styled(Feather).attrs<Props>(({theme, type}) => ({
   size: 26,
-  color: theme.COLORS.GREEN_700,
+  color: type === 'PRIMARY' ? theme.COLORS.GREEN_700 : theme.COLORS.RED_700
 }))``

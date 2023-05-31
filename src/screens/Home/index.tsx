@@ -7,6 +7,7 @@ import logoImg from '@assets/logo.png'
 
 import { ButtonIcon } from "@components/ButtonIcon"
 import { Status } from "@components/Status"
+import { Button } from "@components/Button"
 
 export function Home() {
   const { COLORS, FONT_SIZE, FONT_FAMILY } = useTheme()
@@ -22,12 +23,19 @@ export function Home() {
 
       <Card>
         <Status />
-        <ButtonIcon />
+        <ButtonIcon 
+          icon="arrow-up-right"
+        />
       </Card>
 
       <Text style={{marginTop: 40, fontSize: FONT_SIZE.MD, color: COLORS.GRAY_700, fontFamily: FONT_FAMILY.REGULAR}}>
         Refeições
       </Text>
+
+      <Button 
+        icon="plus"
+        title="Nova refeição"
+      />
 
     </Container>
   )
