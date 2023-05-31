@@ -1,10 +1,15 @@
+import { ThemeProvider } from 'styled-components/native';
 import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans';
-import { Text, View } from 'react-native';
+import { Home } from '@screens/Home';
+import theme from '@theme/theme';
+import { ActivityIndicator } from 'react-native';
 
 export default function App() {
+  const [fontsLoaded] = useFonts({NunitoSans_400Regular, NunitoSans_700Bold});
+
   return (
-    <View>
-      <Text>My App</Text>
-    </View>
+    <ThemeProvider theme={theme}>
+      { fontsLoaded ? <Home /> : <ActivityIndicator />}
+    </ThemeProvider>
   );
 }
