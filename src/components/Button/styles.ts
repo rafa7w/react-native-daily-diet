@@ -16,6 +16,7 @@ export const Container = styled(TouchableOpacity)<Props>`
   border-radius: 6px;
   flex-direction: row;
   margin-top: 8px;
+  margin-bottom: 50px;
 `;
 
 export const Icon = styled(Feather).attrs<Props>(({theme, type}) => ({
@@ -26,7 +27,7 @@ export const Icon = styled(Feather).attrs<Props>(({theme, type}) => ({
 `
 
 export const Title = styled(Text)<Props>`
-  color: ${({theme, type}) => type === 'PRIMARY' ? '#FFF': '#1B1D1E' };
+  color: ${({theme, type}) => type === 'PRIMARY' ? theme.COLORS.WHITE : theme.COLORS.GRAY_700 };
   ${({theme}) => css`
     font-size: ${theme.FONT_SIZE.MD}px;
     font-family: ${theme.FONT_FAMILY.BOLD};

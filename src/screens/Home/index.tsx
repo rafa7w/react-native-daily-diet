@@ -8,9 +8,13 @@ import logoImg from '@assets/logo.png'
 import { ButtonIcon } from "@components/ButtonIcon"
 import { Status } from "@components/Status"
 import { Button } from "@components/Button"
+import { History } from "@components/History"
+import { HistoryCard } from "@components/HistoryCard"
 
 export function Home() {
   const { COLORS, FONT_SIZE, FONT_FAMILY } = useTheme()
+
+
 
   return (
     <Container>
@@ -37,6 +41,15 @@ export function Home() {
         title="Nova refeição"
       />
 
+      <HistoryCard
+        icon="circle"
+      />
+      <HistoryCard
+        icon="circle"
+      />
+      <HistoryCard
+        icon="circle"
+      />
     </Container>
   )
 }

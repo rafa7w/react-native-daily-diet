@@ -12,6 +12,7 @@ export default {
     RED_700: '#BF3B44',
     
     GRAY_100: '#DDDEDF',
+    GRAY_200: '#B9BBBC',
     GRAY_500: '#333638',
     GRAY_700: '#1B1D1E',
   },
@@ -20,6 +21,7 @@ export default {
     BOLD: 'NunitoSans_700Bold'
   },
   FONT_SIZE: {
+    LT: 12,
     SM: 14,
     MD: 16,
     LG: 18,
