@@ -3,7 +3,7 @@ import { Container, Title, ButtonTypeStyleProps, Icon } from './styles';
 import { Feather } from '@expo/vector-icons'
 
 type Props = TouchableOpacityProps & {
-  icon: keyof typeof Feather.glyphMap;
+  icon?: keyof typeof Feather.glyphMap;
   title: string;
   type?: ButtonTypeStyleProps;
 }

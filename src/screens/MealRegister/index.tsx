@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { StatusBar } from 'react-native';
 import { useTheme } from 'styled-components/native';
-import { Header } from "@components/Header";
 import { Container, HorizontalContainer, Section, Title, VerticalContainer } from "./styles";
+
+import { Header } from "@components/Header";
 import { Input } from '@components/Input';
 import { Filter } from '@components/Filter';
-import { useState } from 'react';
+import { Button } from '@components/Button';
 
 export function MealRegister() {
   const { COLORS } = useTheme()
@@ -33,7 +35,7 @@ export function MealRegister() {
           </VerticalContainer>
           <VerticalContainer >
             <Title>Hora</Title>
-            <Input width='SMALL'/>
+            <Input width='SMALL' maxLength={5}/>
           </VerticalContainer>
         </HorizontalContainer>
         <Title>Está dentro da dieta?</Title>
@@ -47,6 +49,10 @@ export function MealRegister() {
             type='NAO'
           />
         </HorizontalContainer>
+        <Button 
+          style={{marginTop: -10}}
+          title='Cadastrar refeição'
+        />
       </Section>
     </Container>
   )

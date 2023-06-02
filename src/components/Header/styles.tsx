@@ -18,7 +18,7 @@ export const Container = styled.View`
 
 export const BackIcon = styled(TouchableOpacity)`
   position: absolute;
-  top: 38px;
+  top: 46px;
   left: 20px; 
   padding: 2px;
 `
@@ -36,4 +36,5 @@ export const Title = styled.Text`
     font-size: ${theme.FONT_SIZE.LG}px;
     font-family: ${theme.FONT_FAMILY.BOLD};
   `}
+  margin-top: 15px;
 `
