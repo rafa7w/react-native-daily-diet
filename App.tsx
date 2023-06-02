@@ -1,7 +1,7 @@
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans';
-import { Details } from '@screens/Details';
+import { MealRegister } from '@screens/MealRegister';
 import theme from '@theme/theme';
 import { Loading } from '@components/Loading';
 
@@ -15,7 +15,7 @@ export default function App() {
         backgroundColor='#FAFAFA'
         translucent
       />
-      { fontsLoaded ? <Details icon='arrow-left' /> : <Loading />}
+      { fontsLoaded ? <MealRegister /> : <Loading />}
     </ThemeProvider>
   );
 }

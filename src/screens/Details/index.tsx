@@ -26,7 +26,7 @@ export function Details({icon, type = 'INTO', ...rest}: Props) {
         </BackButton>
         <Status />
       </Header>
-
+      
       <Text style={{fontFamily: FONT_FAMILY.BOLD, fontSize: FONT_SIZE.SM, color: COLORS.GRAY_700, marginTop: 20, textAlign: 'center'}}>
         Estatísticas gerais
       </Text>
