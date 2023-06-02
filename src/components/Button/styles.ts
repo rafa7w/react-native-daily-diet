@@ -11,12 +11,13 @@ type Props = {
 export const Container = styled(TouchableOpacity)<Props>`
 	background-color: ${({ theme, type }) => type === 'PRIMARY' ? theme.COLORS.GRAY_500 : 'transparent' };
   height: 50px;
+  border-width: ${({type}) => type === 'SECONDARY' ? 1 : 0};
+  border-color: ${({theme, type}) => type === 'SECONDARY' ? theme.COLORS.GRAY_700 : 'transparent'};
   justify-content: center;
   align-items: center;
   border-radius: 6px;
   flex-direction: row;
-  margin-top: 8px;
-  margin-bottom: 50px;
+  margin-top: 10px;
 `;
 
 export const Icon = styled(Feather).attrs<Props>(({theme, type}) => ({
